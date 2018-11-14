@@ -38,7 +38,7 @@ abstract class PersonClass {
     this.level = theLevel;
   }
 
-  getNom() {
+  getName() {
     return this.name;
   }
 
@@ -59,7 +59,9 @@ abstract class PersonClass {
   }
 
   attackPlayer(p: PersonClass){
-    return p.getLifePoint() - p.getAttackPoint();
+    console.log("L'attaque provoque : " + this.getAttackPoint() + " points de dégâts");
+    p.lifePoint -= this.attackPoint;
+    // return p.getLifePoint() -= p.getAttackPoint();
   }
 
 }
@@ -88,4 +90,11 @@ class Wizard extends PersonClass {
   attackPoint = 100;
 }
 
-// var hanzo = new Hunter(name: "Hanzo", type: "joueur", level: 1);
+var hunt = new Hunter("Hanzo", "Joueur", 1);
+var war = new Warrior("Garrosh", "Joueur", 1);
+var wizard = new Wizard("Gandalf","Joueur", 1);
+
+console.log(hunt);
+console.log(war);
+console.log(hunt.attackPlayer(war));
+console.log(war);

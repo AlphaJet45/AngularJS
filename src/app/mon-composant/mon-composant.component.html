@@ -2,12 +2,19 @@
   Ceci est un component
 </p>
 
+<!-- Pour les fruits -->
 <div *ngFor="let i of fruits">
   <ul>
     <li>{{ i }}</li>
   </ul>
 </div>
 
+<!-- Pour un personnage -->
 <div>
-Le perso est de classe {{ getPlayerClass() }} et il est de niveau {{ getPlayerLevel() }}
+  Le perso est de classe {{ getPlayerClass() }} et il est de niveau {{ getPlayerLevel() }}
+</div>
+
+<!-- Pour la classe PersonClass -->
+<div>
+  Voici le premier joueur : {{ hanzo }}
 </div>
